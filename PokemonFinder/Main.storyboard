@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Advanced_Picker_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-dQ-6Fe">
+                                <rect key="frame" x="16" y="30" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8i-c5-rvz">
+                                <rect key="frame" x="0.0" y="431" width="359" height="216"/>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-LP-Z9T">
+                                <rect key="frame" x="16" y="393" width="343" height="29"/>
+                                <segments>
+                                    <segment title="99.9"/>
+                                    <segment title="999.99"/>
+                                    <segment title="59:59.99"/>
+                                    <segment title="99x"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="pDP-LA-azv"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.96078431369999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LC6-dQ-6Fe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1fu-Mq-1Gt"/>
+                            <constraint firstItem="LC6-dQ-6Fe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Cny-Re-1fa"/>
+                            <constraint firstItem="hYC-LP-Z9T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KuS-ta-IiS"/>
+                            <constraint firstItem="K8i-c5-rvz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wpx-Xy-OdL"/>
+                            <constraint firstItem="K8i-c5-rvz" firstAttribute="top" secondItem="hYC-LP-Z9T" secondAttribute="bottom" constant="10" id="cLz-Pc-dn7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hYC-LP-Z9T" secondAttribute="trailing" id="eQQ-Np-zBw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K8i-c5-rvz" secondAttribute="bottom" constant="20" id="hwD-ae-Umz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K8i-c5-rvz" secondAttribute="trailing" id="kxA-JI-rRl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LC6-dQ-6Fe" secondAttribute="trailing" id="m0i-YM-leo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="LC6-dQ-6Fe" id="ABb-qU-Uyg"/>
+                        <outlet property="picker" destination="K8i-c5-rvz" id="lxl-us-F9s"/>
+                        <outlet property="segmentedControl" destination="hYC-LP-Z9T" id="e9v-YU-BRR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
